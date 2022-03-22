@@ -22,7 +22,7 @@ office.set_description("Холодна кімната з порожніми ро
 basement = my_game_class.Room("Підвал")
 basement.set_description("Непроглядна темрява. З стелі капає вода...")
 
-secret_room = my_game_class.Secret_Room("Секретна кімната")
+secret_room = my_game_class.SecretRoom("Секретна кімната")
 secret_room.set_description("Краще було сюди не заходити.")
 
 library.link_room(workshop, "схід")
@@ -81,7 +81,7 @@ wax.set_description("Віск циліндричної форми")
 basement.set_item(wax)
 
 matches = my_game_class.Item("Коробка сірників")
-matches.set_description("Коробочка сірників 'Козацька слава'. Залився один нещасний сірник.")
+matches.set_description("Коробочка сірників 'Козацька слава'. Залишився один нещасний сірник.")
 
 candle = my_game_class.Item("Свічка")
 candle.set_description("Поки що толку з неї небагато")
@@ -273,4 +273,4 @@ while DEAD is False:
         else:
             print("Тут немає підходящого персонажа.")
     else:
-        print("Неможна " + command)
+        print("Неможна " + command + ".")
