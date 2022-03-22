@@ -25,3 +25,48 @@ python3 task_5/menu.py
 ## Модуль game.py
 
 Містить класи гри: Room, Character, Friend, Enemy, Item.
+
+## Приклад використання
+
+```
+Kitchen
+--------------------
+A dank and dirty room buzzing with flies.
+The Dining Hall is south
+> talk
+
+
+Kitchen
+--------------------
+A dank and dirty room buzzing with flies.
+The Dining Hall is south
+> fight
+There is no one here to fight with
+
+
+Kitchen
+--------------------
+A dank and dirty room buzzing with flies.
+The Dining Hall is south
+> take
+There's nothing here to take!
+
+
+Kitchen
+--------------------
+A dank and dirty room buzzing with flies.
+The Dining Hall is south
+> south
+
+
+Dining Hall
+--------------------
+A large room with ornate golden decorations on each wall.
+The Ballroom is west
+The Kitchen is north
+Dave is here!
+A smelly zombie
+The [book] is here - A really good book entitled 'Knitting for dummies'
+> talk
+[Dave says]: What's up, dude! I'm hungry.
+```
