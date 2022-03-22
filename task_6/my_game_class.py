@@ -78,7 +78,7 @@ class Item:
 
     def describe(self):
         """Return all information about the item"""
-        print(f"[{self.get_name()}] тут - {self._description}")
+        print(f"[{self.get_name()}] - {self._description}")
 
     def set_price(self, price: int):
         """Set price of item"""
@@ -199,6 +199,7 @@ class Trader(Character):
         price = self.get_goods().get_price()
         if new_price <= int(price/2):
             price = int(price*1.5)
+            print(f"{self.name} :")
             print('Добре... ')
             print('Ти це хотів почути, торгаш?')
             print(f'Нова ціна: {int(price*2)}')
@@ -206,10 +207,11 @@ class Trader(Character):
         elif new_price <= price:
             difference = price - new_price
             price = int(price - difference/3)
-            print(f'Нууу, давай {price} і по рукам.')
+            print(f'{self.name} : Нууу, давай {price} і по рукам.')
             self.get_goods().set_price(price)
         elif new_price >= price*2:
             price = int(price/1.5)
+            print(f"{self.name} :")
             print('Добре... ')
             print('Ти це хотів почути, торгаш?')
             print(f'Нова ціна: {int(price/2)}')
@@ -217,7 +219,7 @@ class Trader(Character):
         else:
             difference = new_price - price
             price = int(price + difference / 3)
-            print(f'Нууу, давай {price} і по рукам.')
+            print(f'{self.name} : Нууу, давай {price} і по рукам.')
             self.get_goods().set_price(price)
 
 
@@ -249,7 +251,7 @@ class Buyer(Trader):
 
     def sell(self, backpack: Backpack):
         """Sell item"""
-        if self.get_goods() in backpack:
+        if self.get_goods() in backpack.backpack:
             print(f"Ти отримав {self.get_goods().get_price()} грн!")
             backpack.remove(self.get_goods())
             return self.get_goods().get_price()
