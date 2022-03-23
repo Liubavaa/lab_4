@@ -17,9 +17,16 @@ python3 task_6/my_main_game.py
 ##  Rules of the game
 
 The player travels through the rooms, which are objects and characters: friends, enemies, sellers and buyers. 
-Player can talk to each character and find out the price information. The player can combine items and get new ones. 
-You get an item after helping friends. You can bargain with traders for the price of the item. After defeating two enemies, 
-a secret room with the last enemy will open. The game ends after defeating him/her or losing to any enemy.
+Player can:
+- take item that is in room
+- talk to every character and find out the price information
+- combine items and get new ones
+- help your friend and get prize
+- bargain with traders for the price of the item
+- buy item
+- sell item
+- fight with enemies(actually player will help them)
+After defeating two enemies secret room with the last enemy will be opened.
 
 ## Module my_game_class.py
 
